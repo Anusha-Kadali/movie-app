@@ -1,0 +1,37 @@
+table {
+  margin: 20px;
+  width: 80%;
+}
+
+table.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+tr:nth-child(odd) {
+  background-color: #ececec;
+  color: slategray;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+tr:nth-child(even) {
+  background-color: #fcfcfc;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+th {
+  background-color: rgba(36, 34, 36, 0.824);
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  color: whitesmoke;
+}
+
+button {
+  width: 60px;
+  height: 35px;
+  border-radius: 20px;
+  border: none;
+  background-color: rgb(112, 112, 224);
+  color: whitesmoke;
+}

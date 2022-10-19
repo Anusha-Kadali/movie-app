@@ -1,0 +1,52 @@
+<div class="row">
+  <div class="main">
+    <div class="twelve">
+      <i class="bx bxs-camera-movie"></i>
+      <h1>
+        <b style="color: red">B</b>eyound <b style="color: red">T</b>he
+        <b style="color: red">S</b>creen <b style="color: red">!</b>
+      </h1>
+    </div>
+    <div class="nav">
+      <a
+        *ngIf="isLoggedIn"
+        class="nav-link"
+        routerLink="/app-intrested"
+        routerLinkActive="active"
+        ariaCurrentWhenActive="page"
+        >Intrested</a
+      >
+      <a
+        class="nav-link"
+        routerLink="/app-home"
+        routerLinkActive="active"
+        ariaCurrentWhenActive="page"
+        >Home</a
+      >
+      <a
+        *ngIf="!isLoggedIn"
+        class="nav-link"
+        routerLink="/app-userlogin"
+        routerLinkActive="active"
+        ariaCurrentWhenActive="page"
+        >User</a
+      >
+      <a
+        *ngIf="isLoggedIn"
+        class="nav-link"
+        routerLink="/app-home"
+        (click)="logout()"
+        ariaCurrentWhenActive="page"
+        >logout</a
+      >
+      <a
+        *ngIf="isLoggedIn"
+        class="nav-link"
+        routerLink="/app-dashboard"
+        routerLinkActive="active"
+        ariaCurrentWhenActive="page"
+        >Dashboard</a
+      >
+    </div>
+  </div>
+</div>

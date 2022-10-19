@@ -1,0 +1,59 @@
+.row {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.main {
+  display: flex;
+  position: relative;
+  justify-content: flex-end;
+  opacity: 0.7;
+  height: 60px;
+  width: 90%;
+  align-items: center;
+  border-radius: 22px;
+}
+
+.nav {
+  display: flex;
+  height: 40px;
+  padding-right: 20px;
+  width: 500px;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.main {
+  display: flex;
+  justify-content: space-between;
+}
+
+.twelve {
+  display: flex;
+  justify-content: space-between;
+}
+
+i {
+  font-size: 45px;
+  margin-right: 20px;
+  color: whitesmoke;
+}
+
+h1 {
+  font-size: 30px;
+  color: white;
+}
+
+a {
+  height: 40px;
+  color: whitesmoke;
+  text-align: center;
+  border-radius: 20%;
+  text-decoration: none;
+}
+
+.active {
+  background-color: red;
+  color: whitesmoke;
+}

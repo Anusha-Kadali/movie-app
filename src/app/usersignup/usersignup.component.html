@@ -1,0 +1,13 @@
+<form [formGroup]="adduser" class="login" (ngSubmit)="addUser()">
+    <h2>Welcome, User!</h2>
+    <p>Please Sign in</p>
+    <h6 *ngIf="val">All Fields are Required!!</h6>
+    <input type="text" placeholder="User Name" formControlName="name" />
+    <input type="text" placeholder="Email" formControlName="email"/>
+    <input type="password" placeholder="Password" formControlName="password"/>
+    <input type="submit" value="Sign In" />
+    <div class="links">
+        Existing User ? <a class="nav-link" routerLink="/app-userlogin" routerLinkActive="active" ariaCurrentWhenActive="page">Login</a>
+    </div>
+</form>
+

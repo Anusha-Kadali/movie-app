@@ -1,0 +1,10 @@
+<form  [formGroup]="user" class="login" (ngSubmit)="reDirect()">
+    <h2>Welcome, User!</h2>
+    <p>Please log in</p>
+    <input type="text" placeholder="User Name" formControlName="name"/>
+    <input type="password" placeholder="Password" formControlName="password"/>
+    <input type="submit" value="Log In" />
+    <div class="links">
+        Not Registered ?  <a class="nav-link" routerLink="/app-usersignup" routerLinkActive="active" ariaCurrentWhenActive="page">Register</a>
+    </div>
+</form>

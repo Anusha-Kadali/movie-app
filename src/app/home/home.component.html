@@ -1,0 +1,21 @@
+<div class="row">
+  <div class="card" *ngFor="let movie of movies">
+    <img src="{{ movie.image }}" alt="" style="object-fit: fill" class="p1" />
+    <div class="desc">
+      <div class="name">{{ movie.name }}</div>
+      <div class="desc1">
+        <i
+          *ngIf="isLoggedIn"
+          class="bx bxs-heart"
+          id="{{ movie.id }}"
+          (click)="favMovie(movie)"
+          [class.rate]="isRated"
+          [ngClass]="{ changeColor: movie.intrested === true }"
+        ></i>
+        <button type="submit" class="bt1" (click)="redirectForm(movie)">
+          Book
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

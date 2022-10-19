@@ -1,0 +1,54 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="register-photo" *ngIf="!booked">
+  <div class="form-container">
+    <div class="image-holder" style="background-image:url({{movies}})">
+    </div>
+    <form [formGroup]="addBooking" (ngSubmit)="validate()">
+      <h2 class="text-center"><strong>Now</strong> Showing <i class='bx bxs-camera-movie'></i></h2>
+      <div class="form-group"><input id="mvname" name="mvname" type="text" class="form-control" formControlName="name" readonly></div>
+      <div class="form-group"><input id="tckt" name="tckt" type="number" class="form-control" formControlName="tickets" placeholder="Enter number of tickets"></div>
+      <div class="form-group">
+        <select id="select" name="select" class="select form-control" formControlName="showtime">
+        <option hidden value="" disabled selected>Show Time</option>
+        <option value="morning">morning</option>
+        <option value="evening">evening</option>
+        <option value="night">night</option>
+      </select>
+    </div>
+      <div class="form-group"><button class="btn btn-success btn-block" type="submit">Submit</button></div>
+    </form>
+  </div>
+</div>
+<div class="card" *ngIf="booked">
+  <div style="border-radius:200px; height:200px; width:200px; background: #F8FAF5; margin:0 auto;" class="desc">
+      <!-- <i class='bx bx-x'></i> -->
+      <img src="../../assets/images/ticket.png" alt="" srcset="">
+  </div>
+  <h1>Booked!</h1><br>
+  <div class="desc">
+    <table>
+      <tr>
+        <td style="font-weight:bolder ;">User Name</td>&nbsp;&nbsp;&nbsp;
+        <td>{{username}}</td>
+      </tr>
+      <tr>
+        <td style="font-weight:bolder ;">Movie Name</td>&nbsp;&nbsp;&nbsp;
+        <td>{{name}}</td>
+      </tr>
+      <tr>
+        <td style="font-weight:bolder ;">Show</td>&nbsp;&nbsp;&nbsp;
+        <td>{{stime}}</td>
+      </tr>
+      <tr>
+        <td style="font-weight:bolder ;">Ticket</td>&nbsp;&nbsp;&nbsp;
+        <td>{{ticket}}</td>
+      </tr>
+    </table>
+  </div>
+  <div class="button">
+    <button class='btn1' style=" font-size:30px;" type="submit" (click)="redirectHome()">Home</button>
+  </div>
+  <br>
+</div>
